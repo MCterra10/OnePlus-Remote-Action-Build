@@ -421,14 +421,14 @@ jobs:
         uses: actions/checkout@v6
         with:
           repository: freeza-inc/OnePlus_KSUN_SUSFS_v1
-          ref: main
+          ref: dev2
           sparse-checkout: |
             manifests/
           sparse-checkout-cone-mode: false
 
       - name: 🔨 Build Kernel
         id: build
-        uses: freeza-inc/OnePlus_KSUN_SUSFS_v1/.github/actions@main
+        uses: freeza-inc/OnePlus_KSUN_SUSFS_v1/.github/actions@dev2
         with:
           op_config_json: ${{ steps.prepare_config.outputs.config_json }}
           ksu_type: ${{ matrix.ksu_type }}
