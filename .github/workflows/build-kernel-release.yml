@@ -14,6 +14,7 @@ on:
         options:
           # OOS16
           - OP15_oos16
+          - OP15r_oos16
         default: OP15_oos16
       ksu_options:
         description: 'Enter KernelSU build json'
